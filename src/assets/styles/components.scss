@@ -1,0 +1,1303 @@
+@import "./global.scss";
+
+$text-clip: linear-gradient(
+  80deg,
+  #f42dff32,
+  rgba(253, 185, 47, 0.624),
+  pink,
+  pink
+);
+
+$transition: 0.5s all linear;
+
+.navbar {
+  width: 100%;
+  height: fit-content;
+  background-color: #fff;
+  position: fixed;
+  padding: 15px 50px;
+  box-sizing: border-box;
+  overflow: hidden;
+  z-index: 200;
+
+  nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    box-sizing: border-box;
+  }
+}
+
+.menu-btn{
+    font-size: 30px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    box-sizing: border-box;
+    overflow: hidden;
+    width: 50%;
+    color: $hover;
+    display: none;
+}
+
+.sidebar{
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: fixed;
+    z-index: 100;
+    background-color: $background;
+    inset: 0;
+    padding: 10px;
+    padding-top: 40%;
+    transition: $transition;
+
+    .Button{
+        width: 100%;
+        padding: 12px;
+        font-size: 15px;
+        border-radius: 20px;
+        background-color: $black;
+        border: 1px solid $black;
+        color: $background;
+    }
+}
+
+.close-pop{
+    transform: scaleY(0);
+    transform-origin: top;
+    visibility: hidden;
+}
+
+.show-pop{
+    transform: scaleY(1);
+    transform-origin: top;
+    visibility: visible;
+}
+
+.hero-section {
+  width: 100%;
+  height: fit-content;
+  box-sizing: border-box;
+  overflow: hidden;
+  text-align: center;
+  padding: 0px 40px 10px 40px;
+  font-family: $font2;
+
+  h1 {
+    font-size: 7.5rem;
+    margin: 10px;
+    font-weight: 500;
+    background: $text-clip;
+    color: transparent;
+    background-clip: text;
+  }
+
+  h2 {
+    width: 68%;
+    margin: auto auto;
+    font-size: 3rem;
+    font-weight: 300;
+    font-family: $font;
+    line-height: 3.5rem;
+    background: $text-clip;
+    color: transparent;
+    background-clip: text;
+  }
+}
+
+.hero-button {
+  padding: 12px 20px;
+  border-radius: 30px;
+  border: 1px solid $black;
+  font-size: 16px;
+  color: #222222;
+  margin-top: 40px;
+  cursor: pointer;
+  transition: $transition;
+
+  &:hover {
+    background-color: $black;
+    color: $background;
+  }
+}
+
+.get-started-section {
+  width: 100%;
+  height: fit-content;
+  box-sizing: border-box;
+  overflow: hidden;
+  padding: 30px;
+  background: $text-clip;
+  margin-top: 50px;
+  color: $background;
+
+  p {
+    font-size: 25px;
+    width: 60%;
+  }
+
+  .Button {
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: $background;
+    border: 1px solid $background;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: $transition;
+
+    &:hover {
+      border: 1px solid $hover;
+      color: $hover;
+    }
+  }
+}
+
+.card-section {
+  width: 100%;
+  height: fit-content;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-family: $font2;
+  margin: 60px 0pc;
+}
+
+.get-started-card {
+  background-color: $card-black;
+  padding: 20px 27px;
+  box-sizing: border-box;
+  overflow: hidden;
+  max-width: calc(100% / 5 - 20px);
+  min-width: calc(100% / 5 - 20px);
+  min-height: 220px;
+  height: 290px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+
+  h1 {
+    font-size: 1.3rem;
+    font-weight: 400;
+  }
+
+  p {
+    font-size: 14px;
+    width: 100%;
+    font-weight: 300;
+    color: #bababa;
+  }
+}
+
+.card-icon {
+  width: 70px;
+  height: fit-content;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: auto;
+}
+
+.evm-section {
+  width: 100%;
+  height: fit-content;
+  box-sizing: border-box;
+  overflow: hidden;
+  padding: 50px 50px;
+
+  h1 {
+    width: 55%;
+    margin-left: 100px;
+    font-size: 2.5rem;
+    font-weight: 400;
+    line-height: 5.5rem;
+  }
+}
+
+.evm-card-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.evm-card {
+  width: calc(100% / 2 - 25px);
+  overflow: hidden;
+  box-sizing: border-box;
+  background-color: $card-black;
+  padding: 20px 27px;
+  color: $background;
+  box-shadow: 2px 2px 10px $card-black;
+  border-radius: 25px;
+
+  h1 {
+    width: 100% !important;
+    font-size: 1.7rem;
+    line-height: normal;
+    margin: 0px;
+  }
+  h1:nth-child(3) {
+    color: #bababa;
+  }
+
+  p {
+    color: #bababa;
+    font-size: 15px;
+    margin: 30px 0px;
+  }
+}
+
+.evm-icon {
+  width: calc(100% / 2.5);
+  height: fit-content;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $text-clip;
+}
+
+.evm-button-holder {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding-bottom: 20px;
+}
+
+.evm-buttons {
+  width: 170px;
+  cursor: pointer;
+  border-radius: 30px;
+  padding: 15px 0px;
+  box-sizing: border-box;
+  font-size: 15px;
+  font-weight: 500;
+  transition: $transition;
+}
+
+.btn1:hover {
+  background: $hover !important;
+  color: $background;
+}
+
+.btn2:hover {
+  border: 2px solid $hover !important;
+  color: $hover !important;
+}
+
+.blockchain-section {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 100px;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.blockchain-section-text {
+  width: 42%;
+  padding-left: 50px;
+
+  h1 {
+    font-size: 3rem;
+    font-weight: 400;
+  }
+
+  p {
+    font-size: 22px;
+    color: #6e6d6d;
+    font-weight: 500;
+  }
+}
+
+.blockchain-btn-holder {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  .Button,
+  a {
+    width: calc(100% / 2 - 20px);
+    padding: 12px 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border: 1px solid $black;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    display: flex;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 30px;
+    color: $black;
+    transition: $transition;
+    text-decoration: none;
+
+    &:hover {
+      border: 1px solid $hover;
+      color: $hover;
+    }
+  }
+}
+
+.long-btn {
+  width: 100% !important;
+  background-color: $black;
+  color: $background !important;
+
+  &:hover {
+    background-color: $hover !important;
+  }
+}
+
+.blockchain-section-vid {
+  width: 750px;
+  height: fit-content;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  max-height: 750px;
+  position: relative;
+  left: calc(750px / 2);
+
+  .video{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    min-width: 100%;
+    max-width: 100%;
+  }
+}
+
+.products-section {
+  padding: 20px 40px;
+
+  h1 {
+    font-size: 1.8rem;
+    font-weight: 400;
+  }
+  p {
+    font-size: 22px;
+    color: #828282;
+    font-weight: 500;
+  }
+}
+
+.products-card-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 35px;
+  padding: 20px 0px;
+
+  .card {
+    width: calc(100% / 3);
+    background-color: $card-black;
+    padding: 27px;
+    box-sizing: border-box;
+    overflow: hidden;
+    min-height: 530px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+
+    h1 {
+      color: $background;
+      font-weight: 500 !important;
+    }
+    p {
+      margin: 0px;
+      font-size: 18px;
+    }
+
+    .Button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      margin-top: auto;
+      width: 170px;
+      padding: 12px 20px;
+      border-radius: 30px;
+      color: $background;
+      border: 1px solid $background;
+      font-size: 15px;
+      cursor: pointer;
+      transition: $transition;
+
+      &:hover {
+        border: 1px solid $hover;
+        color: $hover;
+      }
+    }
+  }
+}
+
+.card-img {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  height: fit-content;
+  box-sizing: border-box;
+  overflow: hidden;
+  justify-content: center;
+  background: $text-clip;
+}
+
+.flare-use-section {
+  padding: 20px 40px;
+
+  h1 {
+    font-size: 3rem;
+    font-weight: 400;
+  }
+}
+
+.flare-use-card-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px 0px;
+
+  .card {
+    padding: 27px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: calc(100% / 5 - 10px);
+    min-height: 340px;
+    border: 1px solid #6e6d6d;
+    border-radius: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    h1 {
+      font-size: 1.3rem;
+      font-weight: 400;
+      margin-bottom: 20px;
+      margin-top: 0px;
+    }
+
+    .card-icon {
+      width: 40%;
+      height: fit-content;
+      box-sizing: border-box;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 25px 0px;
+    }
+
+    p {
+      font-size: 14px;
+      color: #adacac;
+      margin-top: 0px;
+      font-weight: 500;
+    }
+
+    .Button {
+      width: 80%;
+      padding: 12px 0px;
+      font-size: 15px;
+      margin-top: auto;
+      border-radius: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      cursor: pointer;
+      border: 1px solid $black;
+      font-weight: 500;
+      transition: $transition;
+
+      &:hover {
+        border: 1px solid $hover;
+        color: $hover;
+      }
+    }
+  }
+}
+
+.image-text-section {
+  padding: 50px;
+  position: relative;
+}
+
+.image-section-text {
+  position: absolute;
+  top: 10%;
+  width: 22%;
+  padding: 50px;
+
+  .section-img {
+    width: 100%;
+    height: fit-content;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  h1 {
+    font-size: 1.7rem;
+    color: $background;
+    font-weight: 400;
+    margin-bottom: 40px;
+  }
+
+  a {
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 30px;
+    color: $background;
+    border: 1px solid $background;
+    font-weight: 100%;
+    text-decoration: none;
+  }
+}
+
+footer {
+  position: relative;
+  overflow: hidden;
+  background: $background;
+  min-height: 450px;
+  display: flex;
+  align-items: end;
+
+  nav {
+    width: 100%;
+    padding: 50px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: $text-clip;
+
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      gap: 40px;
+
+      p {
+        margin: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $background;
+        gap: 5px;
+        font-weight: 500;
+        font-size: 15px;
+        height: 100%;
+      }
+
+      a {
+        text-decoration: none;
+        color: $background;
+
+        svg {
+          fill: $background;
+          gap: -20px;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+.footer-logo div {
+  width: 100px;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.icon-div {
+  gap: 20px;
+}
+
+//connect page componenet styling
+
+.connect-main {
+  width: 100%;
+  height: fit-content;
+  box-sizing: border-box;
+  overflow: hidden;
+  padding: 10px;
+
+  h1 {
+    text-align: center;
+    margin-top: 40px;
+    font-family: $font2;
+    font-size: 2.3rem;
+  }
+}
+
+.head-line-loader {
+  display: flex;
+  margin: auto auto;
+  width: 100px;
+  height: 3px;
+  background-color: #5142fc;
+  border-radius: 5px;
+  align-items: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #5142fc;
+    border-radius: 50%;
+    animation: headerlineloader 3s alternate 0s infinite both linear;
+  }
+}
+
+@keyframes headerlineloader {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(90px);
+  }
+}
+
+.connect-section {
+  padding: 40px 20px;
+  height: fit-content;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.connect-cards {
+  width: calc(100% / 4.2 - 30px);
+  height: fit-content;
+  background: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+  box-shadow: 0 2px 8px #6e6d6d2f;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+  }
+
+  .img {
+    width: 70px;
+    height: fit-content;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    border-radius: 100%;
+  }
+
+  h1 {
+    margin: 0px;
+    font-size: 1.1rem !important;
+    text-align: start;
+  }
+  p {
+    margin: 0px;
+    font-size: 15px;
+    color: #6e6d6d;
+    font-weight: 600;
+    margin-top: 7px;
+  }
+}
+
+.verified-badge {
+  position: absolute;
+  bottom: 20px;
+  left: 70px;
+  width: 15px;
+  height: 15px;
+  background: #5142fc;
+  color: #fff;
+  font-size: 11px;
+  font-weight: bold;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pop-disabled {
+  display: none;
+}
+
+.pop-body {
+  width: 100%;
+  position: fixed;
+  inset: 0;
+  z-index: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #00000044;
+  backdrop-filter: blur(5px);
+}
+
+.connect-popup {
+  padding: 20px;
+  height: fit-content;
+  box-sizing: border-box;
+  overflow: hidden;
+  background-color: $background;
+  text-align: center;
+  max-width: calc(100% / 2.8);
+  border-radius: 20px;
+  position: relative;
+
+  .img {
+    width: 50px;
+    height: fit-content;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto auto;
+  }
+
+  h1 {
+    font-size: 1.3rem;
+    margin: 2px 0px;
+  }
+
+  p {
+    font-size: 17px;
+    font-weight: 600;
+  }
+   small{
+    font-size: 13px;
+    font-weight: 500;
+    color: #6e6d6d;
+  }
+}
+
+.error-text {
+  margin: 0px;
+  border: 1px solid #ff0000;
+  color: #ff0000;
+  padding: 5px 40px;
+  box-sizing: border-box;
+  overflow: hidden;
+  text-wrap: wrap;
+  font-size: 15px !important;
+  margin-bottom: 30px;
+  border-radius: 5px;
+}
+
+.connect-functions {
+  .Button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 30px;
+    margin-bottom: 10px;
+    border: 1px solid #5142fc;
+    font-size: 15px;
+    font-weight: 500;
+    color: #5142fc;
+    cursor: pointer;
+  }
+}
+
+.bottom-text {
+  margin-top: 50px;
+
+  p {
+    font-size: 15px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 5px;
+
+    svg {
+      font-size: 17px;
+      fill: #222222;
+    }
+  }
+}
+
+.pop-loader {
+  width: 100%;
+  height: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #5142fc;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #5142fc;
+    border-radius: 50%;
+    animation: poploader 5s alternate 0s infinite both linear;
+  }
+}
+
+@keyframes poploader {
+  from {
+    transform: translateX(-200px);
+  }
+  to {
+    transform: translateX(200px);
+  }
+}
+
+.phase-text{
+    resize: none;
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    overflow: hidden;
+    min-height: 150px;
+    font-size: 15px;
+    font-family: 'Nunito', sans-serift;
+    outline: none;
+    border: 1px solid #222222;
+    margin-bottom: 10px;
+
+    &::placeholder{
+        font-size: 16px;
+    }
+}
+
+.close-tab{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.pop-disabled{
+    display: none;
+}
+
+
+// media query homepage
+
+@media screen and (max-width:1300px) {
+    .connect-section{
+        gap: 10px;
+    }
+
+    .connect-cards{
+        width: calc(100% / 4);
+    }
+}
+
+@media screen and (max-width:1100px) {
+    .hero-section {
+        min-height: 90vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        h1{
+        font-size: 5.7rem;
+    }
+    h2{
+        width: 80%;
+        font-size: 2.4rem;
+        margin: 10px 0px;
+    }
+    }
+
+    .get-started-section{
+        .card-section{
+            gap: 20px;
+        }
+        p{
+            width: 73%;
+        }
+
+        .card{
+            max-width: calc(100% / 2 - 20px);
+            min-width: calc(100% / 2 - 20px);
+            height: 250px;
+        }
+
+        .card:nth-child(1){
+            max-width: 100%;
+            min-width: 100%;
+        }
+    }
+
+    .evm-section{
+        h1{
+            width: 80%;
+        }
+    }
+
+    .blockchain-section{
+        .blockchain-section-text{
+            width: 80%;
+
+            h1{
+                font-size: 2.7rem;
+            }
+        }
+
+        .blockchain-section-vid{
+            width: 1000px;
+            left: calc(1000px / 8);
+            max-height: 1000px;
+        }
+    }
+
+    .flare-use-section{
+            h1{
+                font-size: 2.6rem;
+                flex-wrap: wrap;
+            }
+        }
+
+        .flare-use-card-section{
+        flex-wrap: wrap;
+        .card{
+            width: calc(100% / 2 - 20px);
+            min-height: 300px;
+
+            .card-icon{
+                width: 10%;
+            }
+        }
+
+        .card:nth-child(1) {
+            width: 100%;
+        }
+
+        .card:nth-child(1) .card-icon{
+            width: 10%;
+        }
+    }
+
+    .image-text-section{
+        padding: 50px 0px;
+
+        .image-section-text{
+            width: 35%;
+        }
+
+        h1{
+            font-size: 1.5rem;
+        }
+    }
+
+    .connect-cards{
+        min-width: 250px;
+    }
+
+    .connect-popup{
+        max-width: calc(100% / 2);
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .nav-btn-holder{
+        display: none;
+    }
+
+    .menu-btn{
+        display: contents;
+    }
+
+    .hero-section{
+        h1{
+            font-size: 5rem;
+        }
+        h2{
+            width: 100%;
+        }
+    }
+
+    .evm-section{
+        padding: 50px 20px;
+
+        h1{
+            font-size: 2.2rem;
+        }
+
+        .evm-card{
+            width: calc(100% / 2 - 15px);
+        }
+    }
+
+    .blockchain-section-text{
+        padding-left: 20px;
+        width: 100% !important;
+    }
+
+    .blockchain-section-vid{
+        width: 750px !important;
+        max-height: 750px !important;
+
+        left: calc(750px / 4) !important;
+    }
+}
+
+@media screen and (max-width:900px) {
+    .hero-section{
+        h1{
+            font-size: 4rem;
+        }
+    }
+
+    .evm-card{
+            h1{
+                font-size: 1.7rem !important;
+            }
+        }
+
+        .connect-popup{
+            max-width: calc(100% / 1.8);
+        }
+
+        .connect-cards{
+            width: calc(100% / 2.1);
+        }
+
+}
+
+@media  screen and (max-width:780px) {
+    .blockchain-section-vid{
+        display: none;
+    }
+
+    .blockchain-section-text{
+        padding: 0px 20px;
+    }
+}
+
+@media screen and (max-width:680px) {
+    .navbar{
+        padding: 10px 30px;
+    }
+
+    .hero-section{
+        h1{
+            font-size: 2.7rem;
+        }
+        h2{
+            font-size: 1.5rem;
+            line-height: 2rem;
+        }
+    }
+
+    .get-started-section{
+        padding: 15px;
+
+        p{
+            width: 100%;
+            font-size: 17px;
+        }
+    }
+
+    .get-started-card{
+        max-width: 100% !important;
+        min-width: 100% !important;
+    }
+
+    .evm-section{
+        h1{
+            margin-left: 0px;
+            width: 100% !important;
+            line-height: 3rem;
+            font-size: 1.7rem;
+        }
+    }
+
+    .evm-card-section{
+        flex-wrap: wrap;
+        gap: 15px;
+        
+        .card{
+            width: 100%;
+        }
+    }
+
+    .products-card-section{
+        flex-wrap: wrap;
+        .card{
+            width: 100%;
+        }
+    }
+
+    .flare-use-card-section{
+
+        .card{
+            width: 100% !important;
+        }
+    }
+
+    .image-text-section{
+        height: fit-content;
+        box-sizing: border-box;
+
+        div{
+            width: 100%;
+            height: 300px;
+            box-sizing: border-box;
+            overflow: hidden;
+
+            img{
+                height: 100%;
+            }
+        }
+    }
+
+    .image-section-text{
+        width: 80% !important;
+
+        h1{
+            color: $hover;
+        }
+    }
+
+    .footer nav{
+        padding: 15px 30px;
+        flex-wrap: wrap;
+        gap: 20px;
+
+        div{
+            width: 100%;
+            justify-content: space-between;
+        }
+    }
+
+    .connect-cards{
+        width: 100%;
+    }
+
+    .connect-main{
+        h1:nth-child(1){
+            font-size: 1.7rem;
+        }
+    }
+
+    .connect-popup{
+      max-width: 90%;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .hero-section{
+        padding: 0px 20px 10px 20px;
+
+        h1{
+            font-size: 2.2rem;
+            font-weight: bolder;
+        }
+        h2{
+            font-size: 1.2rem;
+            line-height: 1.5rem;
+        }
+    }
+
+    .evm-section{
+        h1{
+            font-size: 1.5rem;
+            line-height: 2.5rem;
+        }
+    }
+
+    .blockchain-section-text{
+        h1{
+            font-size: 2.2rem !important;
+        }
+
+        p{
+            font-size: 20px;
+        }
+    }
+
+    .blockchain-btn-holder {
+        a{
+            width: 100%;
+        }
+    }
+
+    .products-section{
+        padding: 20px !important;
+
+        .card{
+            min-height: 350px;
+            .Button{
+                margin-top: 20px;
+                width: 100%;
+            }
+        }
+    }
+
+    .flare-use-section{
+        padding: 20px;
+    }
+
+    .card-icon{
+        width: 30% !important;
+    }
+
+    .flare-use-card-section {
+        .card {
+            .Button{
+                width: 100% !important;
+            }
+            h1{
+                margin-bottom: 0px;
+            }
+        }
+    }
+
+    .connect-popup{
+      max-width: 95%;
+    }
+
+    .connect-section{
+      padding: 10px 10px;
+    }
+}

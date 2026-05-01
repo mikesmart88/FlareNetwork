@@ -1,0 +1,3 @@
+export const PORT = 3000
+
+export const API_KEY = "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"

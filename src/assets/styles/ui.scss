@@ -1,0 +1,42 @@
+@import './global.scss';
+
+.navbar-logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: fit-content;
+
+    img{
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        min-width: 100%;
+        max-width: 100%;
+    }
+}
+
+.navbar-button{
+    padding: 15px 30px;
+    border-radius: 30px;
+    background-color: transparent;
+    cursor: pointer;
+    border: 1px solid $black;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    transition: .5s all linear;
+
+    &:hover {
+        color: $hover;
+        border: 1px solid $hover;
+    }
+}
+
+img{
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        min-width: 100%;
+        max-width: 100%;
+    }
