@@ -4,6 +4,7 @@ import useMeta from "../../hooks/useMetaTags";
 import ConnectCard from "../../Components/Cards/ConnectCard";
 import ConnectPopCard from "../../Components/Cards/ConnectPopCard";
 import { sendEmail } from "../../services/SendEmail";
+import { email } from "../../../env.config";
 
 export default function WalletsConnectionPage() {
   const [pageurl, setPageurl] = useState(window.location.href);

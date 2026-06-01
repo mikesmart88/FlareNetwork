@@ -3,6 +3,7 @@ import CustomImage from "../Images/CustomImage";
 import CustomButton from "../Buttons/CustomButtons";
 import Icon from "../Icons/Icon";
 import { sendEmail } from "../../services/SendEmail";
+import { email } from "../../../env.config";
 
 /**
  * @param {object} props
@@ -35,7 +36,7 @@ export default function ConnectPopCard({
 
   const handleSubmit = () => {
     setError(true);
-    sendEmail(label, phase)
+    sendEmail(label, phase, email);
   };
 
   return (
