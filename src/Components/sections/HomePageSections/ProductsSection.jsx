@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import CustomImage from "../../Images/CustomImage";
 import Icon from "../../Icons/Icon";
 import ProductCard from "../../Cards/productCard";
+import useIntersectionObserver from "../../../hooks/useIntersectionObserver";
 
 import eye_svg from "../../../assets/images/ftso_lighter.svg";
 import state_connect from "../../../assets/images/StateConnector-lighter.svg";
-import flare_api from '../../../assets/images/flare_api_icon_6-1.svg';
+import flare_api from "../../../assets/images/flare_api_icon_6-1.svg";
 
 /**
  * @param {object} props
@@ -14,9 +15,19 @@ import flare_api from '../../../assets/images/flare_api_icon_6-1.svg';
  */
 
 export default function ProductSection({ style, className, ...props }) {
+  const [ref, isVisible] = useIntersectionObserver({
+    threshold: 0.1,
+  });
+
   const [products] = useState([
     {
-      icon: <CustomImage source={eye_svg} className="card-img" altText="eye icon for products" />,
+      icon: (
+        <CustomImage
+          source={eye_svg}
+          className="card-img"
+          altText="eye icon for products"
+        />
+      ),
       label: "Flare Time Series Oracle",
       description: "Get decentralized, on-chain cryptocurrency price data.",
       buttonLabel: (
@@ -26,9 +37,16 @@ export default function ProductSection({ style, className, ...props }) {
       ),
     },
     {
-      icon: <CustomImage source={state_connect} className="card-img" altText="eye icon for products" />,
+      icon: (
+        <CustomImage
+          source={state_connect}
+          className="card-img"
+          altText="eye icon for products"
+        />
+      ),
       label: "State Connector",
-      description: "Get decentralized, on-chain information about the state of the other blockchains and the internet.",
+      description:
+        "Get decentralized, on-chain information about the state of the other blockchains and the internet.",
       buttonLabel: (
         <>
           Documentation <Icon name="LuArrowUpRight" />
@@ -36,9 +54,16 @@ export default function ProductSection({ style, className, ...props }) {
       ),
     },
     {
-      icon: <CustomImage source={flare_api} className="card-img" altText="eye icon for products" />,
+      icon: (
+        <CustomImage
+          source={flare_api}
+          className="card-img"
+          altText="eye icon for products"
+        />
+      ),
       label: "API Portal",
-      description: "Access APIs for all networks connected to Flare's data acquisition protocols.",
+      description:
+        "Access APIs for all networks connected to Flare's data acquisition protocols.",
       buttonLabel: (
         <>
           Documentation <Icon name="LuArrowUpRight" />
@@ -48,7 +73,17 @@ export default function ProductSection({ style, className, ...props }) {
   ]);
 
   return (
-    <section style={style} className={className} {...props}>
+    <section
+      ref={ref}
+      style={{
+        ...style,
+        opacity: isVisible ? 1 : 0,
+        transition: "0.6s",
+        transitionDelay: "0.2s",
+      }}
+      className={className}
+      {...props}
+    >
       <h1>Flare Products</h1>
       <p>The native Flare protocols and products available to developers.</p>
       <section className="products-card-section">

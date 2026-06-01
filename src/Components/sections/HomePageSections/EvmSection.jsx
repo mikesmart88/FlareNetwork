@@ -3,6 +3,7 @@ import CustomImage from "../../Images/CustomImage";
 import CustomButton from "../../Buttons/CustomButtons";
 import EvmCard from "../../Cards/EvmCard";
 import { NavigateTo } from "../../../utils/LinkNavigate";
+import useIntersectionObserver from "../../../hooks/useIntersectionObserver";
 
 import eye_svg from "../../../assets/images/ftso_lighter.svg";
 import state_connect from "../../../assets/images/StateConnector-lighter.svg";
@@ -14,6 +15,10 @@ import state_connect from "../../../assets/images/StateConnector-lighter.svg";
  */
 
 export default function EvmSection({ style, className, ...props }) {
+  const [ref, isVisible] = useIntersectionObserver({
+    threshold: 0.1,
+  });
+
   const [evmCard] = useState([
     {
       icon: <CustomImage source={eye_svg} className="evm-icon" />,
@@ -73,7 +78,17 @@ export default function EvmSection({ style, className, ...props }) {
   ]);
 
   return (
-    <section style={style} className={className} {...props}>
+    <section
+      ref={ref}
+      style={{
+        ...style,
+        opacity: isVisible ? 1 : 0,
+        transition: "0.6s",
+        transitionDelay: "0.2s",
+      }}
+      className={className}
+      {...props}
+    >
       <h1>
         ENM-based layer 1 blockchain with two native data acquisition protocals
       </h1>
