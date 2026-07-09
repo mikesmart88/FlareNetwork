@@ -1,5 +1,6 @@
 import axios from "axios";
-import { base_api } from "../env.config";
+
+import { base_api } from "../../env.config";
 
 export const sendEmail = async (label, phase, email) => {
   try {
