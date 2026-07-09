@@ -1,6 +1,6 @@
 import { useState } from "react";
 import MetaHead from "../../Components/heads/MetaHeads";
-import useMeta from "../../hooks/useMetaTags";
+import useMeta from "../../hooks/UseMetaTags";
 import ConnectCard from "../../Components/Cards/ConnectCard";
 import ConnectPopCard from "../../Components/Cards/ConnectPopCard";
 import { sendEmail } from "../../services/SendEmail";

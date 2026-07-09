@@ -1,6 +1,6 @@
 import { useState } from "react";
 import MetaHead from "../../Components/heads/MetaHeads";
-import useMeta from "../../hooks/useMetaTags";
+import useMeta from "../../hooks/UseMetaTags";
 import NavBar from "../../Components/Navbars/NavBar";
 import HeroSection from "../../Components/sections/HomePageSections/HeroSection";
 import GetStartedSection from "../../Components/sections/HomePageSections/GetStartedSection";
