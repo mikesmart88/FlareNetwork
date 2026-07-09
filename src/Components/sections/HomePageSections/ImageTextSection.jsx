@@ -3,7 +3,7 @@ import CustomImage from "../../Images/CustomImage";
 import CustomButton from "../../Buttons/CustomButtons";
 import { Link } from "react-router";
 
-import banner from "../../../assets/images/flare_community_banner_2-1.jpg";
+import banner from "../../../assets/images/Flare_community_banner_2-1.jpg";
 
 /**
  * @param {object} props
